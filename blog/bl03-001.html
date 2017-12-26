@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>(001/...) configuration initiale</title>
+		<title>(001/...) Configuration initiale</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -50,10 +50,14 @@
 									<p>Premi&egrave;res configurations apr&eacute;s la primo installation de debian stretch sur le serveur d&eacute;di&eacute; kimsufi.<br />
 									Cr&eacute;ation d´un compte utilisateur, changement de port ssh...<br /></p>
 								</header>
-								<div class="image main"><img src="../images/pic02suunto.jpg" alt="" /></div>
-								<p>Avec l’Ambit 2, le param&eacute;trage choisi valait pour tous les modes. Avec la mise à jour Ambit 3, il y a un param&eacute;trage par mode : un mode g&eacute;n&eacute;ral et un mode
-									par exercice (sport).</p>
-									<p>Pour chaque sport configur&eacute; pour la montre, dans le menu «Show advanced settings», il faut choisir son mode d’&eacute;clairage :</p>
+								<div class="image main"><img src="../images/picg02debian9.jpg" alt="" /></div>
+								<p>Pour l'exemple : ip_cible = 1.2.3.4</p>
+								<p>Avec le mot de passe envoy&eacute; par ovh. Connexion ssh en root puis changement de mot de passe.</p>
+								<pre><code>ssh root@1.2.3.4
+								passwd
+							</code></pre>
+									<p>Liste des paquets install&eacute;s</p>
+									<pre><code>dpkg --get-selections</code></pre>
 							</section>
 					</div>
 
@@ -106,7 +110,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; janvd</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; janvd.fr</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
