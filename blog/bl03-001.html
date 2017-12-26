@@ -51,12 +51,12 @@
 									Cr&eacute;ation d´un compte utilisateur, changement de port ssh...<br /></p>
 								</header>
 								<div class="image main"><img src="../images/picg02debian9.jpg" alt="" /></div>
-								<p>Pour l'exemple les identifiants &agrave; personnalis&eacute; sont entre (#)
-									. Exemple, pour l'adresse IP, #xxx.xxx.xxx.xxx# correspond &agrave; l'adresse IP du serveur de la forme 254.2.36.4</p>
-								<p>Avec le mot de passe envoy&eacute; par ovh. Connexion ssh en root puis changement de mot de passe.</p>
+								<p>Pour l'exemple les identifiants &agrave; personnaliser sont entre (#)
+									. Exemple, pour l'adresse IP, <code>#xxx.xxx.xxx.xxx#</code> correspond &agrave; l'adresse IP du serveur de la forme <code>254.2.36.4</code></p>
+								Avec le mot de passe envoy&eacute; par ovh. Connexion ssh en root puis changement de mot de passe.
 								<pre><code>ssh root@#xxx.xxx.xxx.xxx#
 passwd</code></pre>
-									<p>Liste des paquets install&eacute;s</p>
+									Liste des paquets install&eacute;s
 									<pre><code>dpkg --get-selections</code></pre>
 									Mise jour &agrave; jour des paquets install&eacute;s
 									<pre><code>aptitude update && aptitude upgrade</code></pre>
@@ -80,7 +80,7 @@ vi sudoers
 janvd	ALL=(ALL:ALL) ALL
 // fin des modifications
 
-exit
+exit</code></pre>
 							</section>
 					</div>
 
