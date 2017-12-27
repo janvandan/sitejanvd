@@ -63,7 +63,7 @@ passwd</code></pre>
 									Ajout d'un utilisateur <> root
 									<pre><code>adduser #user#</code></pre>
 									Test de la connexion avec ce nouvel utilisateur
-									<pre><code>exit<
+									<pre><code>exit
 ssh #user#@#xxx.xxx.xxx.xxx#</code></pre>
 									Installation de <i>sudo</i>
 									<pre><code>ssh #user#@#xxx.xxx.xxx.xxx#
@@ -74,12 +74,12 @@ apt-get install sudo
 									<pre><code>cd /etc
 cp sudoers sudoers.ori
 
-vi sudoers</code>
+vi sudoers</code></pre>
 									Modifications &eacute; apporter
-									<code>#user#	ALL=(ALL:ALL) ALL</code></pre>
+									<pre><code>#user#	ALL=(ALL:ALL) ALL</code></pre>
 									Changement du num&eacute;ro de port d'acc&eacute;s ssh <code>22</code> en <code>#num_port#</code>. V&eacute;rifier dans <code>/etc/services</code>
-									 sa disponibilit&eacute;. Puis restriction de l'acc&eacute;s &agrave; #user#.
-									<code>cd /etc/ssh
+									 sa disponibilit&eacute;. Puis restriction de l'acc&eacute;s &agrave; <code>#user#</code>.
+									<pre><code>cd /etc/ssh
 sudo cp sshd_config sshd_config.ori
 
 sudo vi sshd_config
@@ -92,11 +92,11 @@ ClientAliveInterval 360
 ClientAliveCountMax 0
 // fin des modifications :wq
 
-service ssh restart</code>
+service ssh restart</code></pre>
 									Ne pas arr&ecirc;ter la session avant de faire un test d'acc&eacute;s ssh en parall&egrave;le. En local sur le poste de travail, supprimer la ligne
 									 <code>#xxx.xxx.xxx.xxx#</code> dans <code>~/.ssh/knwon_hosts</code>.<br />
-									Se connecter via une deuxi&egrave;me session
-<code>ssh #user#@#xxx.xxx.xxx.xxx# -p #num_port#</code>
+									Se connecter via une deuxi&egrave;me session.
+									<pre><code>ssh #user#@#xxx.xxx.xxx.xxx# -p #num_port#</code></pre>
 							</section>
 					</div>
 
