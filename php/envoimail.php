@@ -1,4 +1,11 @@
 <?php
+echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"
+echo "<html lang=\"fr\">"
+echo "<head>"
+echo "<title>Test envoimail.php</title>"
+echo "<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\" />"
+echo "</head>"
+echo "<body>"
 /* Si le formulaire est envoyé alors on fait les traitements */
 if (isset($_POST['envoye']))
 {
@@ -26,14 +33,6 @@ if (isset($_POST['envoye']))
     * en-tête n'est inséré dans nos champs */
     $regex_head = '/[\n\r]/';
 
-echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"
-echo "<html lang=\"fr\">"
-echo "<head>"
-echo "<title>Test envoimail.php</title>"
-echo "<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\" />"
-echo "</head>"
-echo "<body>"
-
     /* Si le formulaire n'est pas posté de notre site on renvoie
     * vers la page d'accueil */
     if (preg_match('/^http:\/\/janvd\.fr\/index\.html$',$_SERVER['HTTP_REFERER']))
@@ -44,19 +43,24 @@ echo "<body>"
       echo "subject = $subject";
       echo "message = $message";
     }
-    else {
+    else
+    {
       echo "KO HTTP_REFERE = $_SERVER['HTTP_REFERER']";
       echo "name = $name";
       echo "from = $from";
       echo "subject = $subject";
       echo "message = $message";
     }
-echo "</body>"
-echo "</html>"
+
     /*if($_SERVER['HTTP_REFERER'] != 'http://janvd.fr/*')
     {
         header('Location: http://janvd.fr');
     }*/
+} else {
+  echo "notset $_POST['envoye']";
+}
+echo "</body>"
+echo "</html>"
 ?>
     /* On vérifie que tous les champs sont remplis */
     elseif (empty($civilite)
